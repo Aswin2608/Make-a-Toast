@@ -2374,6 +2374,7 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="tel"],
 select,
 textarea {
 	-moz-appearance: none;
@@ -2398,6 +2399,7 @@ textarea {
 input[type="text"]:invalid,
 input[type="password"]:invalid,
 input[type="email"]:invalid,
+input[type="tel"]:invalid,
 select:invalid,
 textarea:invalid {
 	box-shadow: none;
@@ -2406,6 +2408,7 @@ textarea:invalid {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
+input[type="tel"]:focus,
 select:focus,
 textarea:focus {
 	border-color: var(--accent);
@@ -2437,6 +2440,7 @@ select::-ms-expand {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="tel"],
 select {
 	height: 3em;
 }
@@ -3395,6 +3399,7 @@ body.is-touch .spotlight {
 .wrapper.style2 input[type="text"]:focus,
 .wrapper.style2 input[type="password"]:focus,
 .wrapper.style2 input[type="email"]:focus,
+.wrapper.style2 input[type="tel"]:focus,
 .wrapper.style2 select:focus,
 .wrapper.style2 textarea:focus {
 	border-color: rgba(255, 255, 255, 0.5);
@@ -3646,9 +3651,16 @@ body.landing #page-wrapper {
 /* Banner */
 
 #banner {
+	background-image: url("../../images/banner.jpg");
+}
+
+#banner-corporate {
+	background-image: url("../../images/Corporatebg.jpeg");
+}
+
+.banner {
 	background-attachment: fixed;
 	background-color: var(--primary-var);
-	background-image: url("../../images/banner.jpg");
 	background-position: center center;
 	background-size: cover;
 	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -3658,7 +3670,7 @@ body.landing #page-wrapper {
 	z-index: 21;
 }
 
-#banner:before {
+.banner:before {
 	content: '';
 	display: inline-block;
 	height: 100vh;
@@ -3666,7 +3678,7 @@ body.landing #page-wrapper {
 	width: 1%;
 }
 
-#banner:after {
+.banner:after {
 	background-image: -moz-linear-gradient(top, var(--overlay), var(--overlay)), url("images/overlay.png");
 	;
 	background-image: -webkit-linear-gradient(top, var(--overlay), var(--overlay)), url("images/overlay.png");
@@ -3684,7 +3696,7 @@ body.landing #page-wrapper {
 	width: 100%;
 }
 
-#banner .content {
+.banner .content {
 	display: inline-block;
 	margin-right: 1%;
 	max-width: 95%;
@@ -3695,22 +3707,22 @@ body.landing #page-wrapper {
 	z-index: 1;
 }
 
-#banner .content header {
+.banner .content header {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-#banner .content header h2 {
+.banner .content header h2 {
 	font-size: 2.5em;
 	margin: 0;
 }
 
-#banner .content header p {
+.banner .content header p {
 	margin: 0.5em 0 0 0;
 	top: 0;
 }
 
-#banner .content .image {
+.banner .content .image {
 	border-radius: 100%;
 	display: inline-block;
 	height: 18em;
@@ -3719,13 +3731,13 @@ body.landing #page-wrapper {
 	width: 18em;
 }
 
-#banner .content .image img {
+.banner .content .image img {
 	border-radius: 100%;
 	display: block;
 	width: 100%;
 }
 
-body.is-touch #banner {
+body.is-touch .banner {
 	background-attachment: scroll;
 }
 
@@ -3898,7 +3910,7 @@ form>.fields>.field {
 
 	/* Banner */
 
-	#banner .content {
+	.banner .content {
 		padding: 4.5em;
 	}
 
@@ -3980,26 +3992,26 @@ form>.fields>.field {
 
 	/* Banner */
 
-	#banner {
+	.banner {
 		background-attachment: scroll;
 	}
 
-	#banner .goto-next {
+	.banner .goto-next {
 		height: 7em;
 	}
 
-	#banner .content {
+	.banner .content {
 		padding: 9em 0;
 		text-align: center;
 	}
 
-	#banner .content header {
+	.banner .content header {
 		display: block;
 		margin: 0 0 2em 0;
 		text-align: center;
 	}
 
-	#banner .content .image {
+	.banner .content .image {
 		margin: 0;
 	}
 
@@ -4107,24 +4119,24 @@ form>.fields>.field {
 
 	/* Banner */
 
-	#banner {
+	.banner {
 		box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.25);
 		min-height: calc(100vh - 44px);
 	}
 
-	#banner:before {
+	.banner:before {
 		height: calc(100vh - 44px);
 	}
 
-	#banner .content {
+	.banner .content {
 		padding: 4.0625em 1.5em 4.875em 1.5em;
 	}
 
-	#banner .content header h2 {
+	.banner .content header h2 {
 		font-size: 1.5em;
 	}
 
-	#banner .content .image {
+	.banner .content .image {
 		height: 9em;
 		width: 9em;
 	}
@@ -4364,7 +4376,7 @@ form>.fields>.field {
 
 	/* Banner */
 
-	#banner .content {
+	.banner .content {
 		padding: 3em 1.5625em 5.25em 1.5625em;
 	}
 
