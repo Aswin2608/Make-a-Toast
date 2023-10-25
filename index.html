@@ -270,6 +270,16 @@
 		<!-- Contact -->
 		<!-- <section id="contact" class="wrapper style2 special fade"> -->
 		<section id="contact" class="spotlight style4 bottom">
+			<script type="text/javascript">
+				var submitted=false;
+				var showSubmittedSuccess = function() {
+					if(submitted) {
+						document.getElementById('contactForm').style.display = 'none';
+						document.getElementById('contactSuccessMessage').style.display = '';
+					}
+				};
+			</script>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="showSubmittedSuccess();"></iframe>
 			<span class="image fit main"><img src="images/banner.jpg" alt="" /></span>
 			<div class="content" style="background: transparent;">
 				<div class="container">
@@ -278,7 +288,7 @@
 						<p>Don't wait, Drop in your details to create your unforgettable event together.</p>
 					</header>
 					<div class="box">
-						<form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScUTAMNDM79E9VT0Jhj2rlfujjLtNt1865x0YDJzffOuHiVFg/formResponse">
+						<form id = "contactForm" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScUTAMNDM79E9VT0Jhj2rlfujjLtNt1865x0YDJzffOuHiVFg/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
 							<div class="fields">
 								<div class="field half"><input type="text" name="entry.2005620554" placeholder="Name"></div>
 								<div class="field half"><input type="tel" name="entry.1166974658" placeholder="Contact number"></div>
@@ -290,6 +300,7 @@
 								<li><input type="submit" value="Send"></li>
 							</ul>
 						</form>
+						<span id="contactSuccessMessage" class="about-text" style="display: none">Your message has been received.</span>
 					</div>
 				</div>
 			</div>
